@@ -1,7 +1,7 @@
 /*
+Submarine Animation
 Creators: Bjorn and Egil Rian
 10/16/19
-Submarine Animation
 */
 int bubbleYpos = 1010; 
 int goRightCounter = 0; 
@@ -20,28 +20,32 @@ rectMode(CENTER);
 void draw()
 { // runs repeatedly.
 noStroke();
-background(0, 191, 255);
+background(0, 191, 255); 
+showTurbine(); //lines coming out of back
+stroke(0);
 fill(128, 128, 128);
 rect(490, 390, 10, 80); //pilot
+noStroke();
 ellipse(485, 348, 35, 35);
 fill(255, 255, 255);
 ellipse(485, 348, 28, 28);
 fill(128, 128, 128);
+stroke(0);
 text("Bjorn Rian - 10/16", 1100, 1000, 500, 100);
 ellipse(250, 500, 100, 100); // front
 rect(500, 500, 500, 100); // body
 triangle(500, 460, 400, 450, 500, 400); //top
 quad(500, 458, 500, 400, 585, 425, 590, 453); //top
 //ellipse(mouseX, mouseY, 25, 25);
-triangle(870, 550, 750, 450, 750, 500); //bottom
-triangle(870, 453, 820, 470, 810, 500); // top
+triangle(870, 550, 750, 450, 750, 500); //end of sub
+triangle(870, 453, 820, 470, 810, 500); 
 rect(810, 502, 26, 110);
 triangle(750, 550, 750, 450, 870, 500);
 stroke(0);
-line(280, 500, 600, 500);
+line(280, 500, 600, 500); // big lines on the hull
 line(310, 490, 620, 490);
 line(310, 510, 610, 510);
-ellipse(325, 475, 15, 15);
+ellipse(325, 475, 15, 15); // small windows
 ellipse(345, 475, 15, 15);
 ellipse(365, 475, 15, 15);
 ellipse(385, 475, 15, 15);
@@ -53,11 +57,11 @@ ellipse(525, 475, 15, 15);
 ellipse(565, 475, 15, 15);
 ellipse(605, 475, 15, 15);
 
-ellipse(675, 500, 50, 50);
-
+fill(204, 255, 255);
+ellipse(675, 500, 50, 50); // big window
 showBubbles();
 showFish();
-showTurbine();
+
 
 //line(streamRight, 470, streamRight + 70, 470);
 
