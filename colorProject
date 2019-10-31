@@ -1,56 +1,51 @@
-PFont font;
-// The font must be located in the sketch's 
-// "data" directory to load successfully
-font = loadFont("Comic Sans MS Bold.ttf"); 
+PFont myFont;
 
 void setup() {
-size(400, 400);
-frameRate(150);
-textAlign(CENTER);
+    size(400, 400);
+    frameRate(150);
+    textAlign(CENTER);
+    myFont = createFont("Comic Sans MS Bold Italic", 32);
+    textFont(myFont);
 }
 
 void draw() {
-background(255, 255, 255);
-colorRed();
-colorBlue();
-colorPurple();
-colorYellow();
-line(200, 0, 200, 400);
-line(0, 200, 400, 200);
+    background(255, 255, 255);
+    colorRed();
+    colorBlue();
+    colorPurple();
+    colorYellow();
+    line(200, 0, 200, 400);
+    line(0, 200, 400, 200);
 }
 
 void colorRed() {
-if(mouseX <= 200 && mouseY <= 200) {
-fill(255, 0, 0);
-textFont(font, 20);
-text("RED", mouseX, mouseY);
-}
-
+    if(mouseX <= 200 && mouseY <= 200) {
+        fill(255, 0, 0);
+        textFont(myFont, 20);
+        text("RED", mouseX, mouseY);
+    }
 }
 
 void colorBlue() {
-if(mouseX >= 200 && mouseY <= 200) {
-fill(0, 0, 255);
-textFont(font, 20);
-text("BLUE", mouseX, mouseY);
-} 
-
+    if(mouseX >= 200 && mouseY <= 200) {
+        fill(0, 0, 255);
+        textFont(myFont, 20);
+        text("BLUE", mouseX, mouseY);
+    } 
 }
 
 void colorPurple() {
-if(mouseX <= 200 && mouseY >= 200) {
-fill(128, 0, 128);
-textFont(font, 20);
-text("PURPLE", mouseX, mouseY);
-} 
-
+    if(mouseX <= 200 && mouseY >= 200) {
+        fill(128, 0, 128);
+        textFont(myFont, 20);
+        text("PURPLE", mouseX, mouseY);
+    } 
 }
 
 void colorYellow() {
-if(mouseX >= 200 && mouseY >= 200) {
-fill(255, 255, 0);
-textFont(font, 20);
-text("YELLOW", mouseX, mouseY);
-}
-
+    if(mouseX >= 200 && mouseY >= 200) {
+        fill(255, 255, 0);
+        textFont(myFont, 20);
+        text("YELLOW", mouseX, mouseY);
+    }
 }
