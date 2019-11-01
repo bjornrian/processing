@@ -1,20 +1,20 @@
-PFont myFont;
+Font myFont; //font class for processing
 
 void setup() {
-    size(400, 400);
-    frameRate(150);
-    textAlign(CENTER);
-    myFont = createFont("Comic Sans MS Bold Italic", 32);
-    textFont(myFont);
+    size(400, 400); //display size
+    frameRate(150); 
+    textAlign(CENTER); //displays text on the center of the cursor
+    myFont = createFont("Comic Sans MS Bold Italic", 32); //sets font to comic sans size 32
+    textFont(myFont); //sets text font to "myFont"
 }
 
 void draw() {
-    background(255, 255, 255);
-    colorRed();
+    background(255, 255, 255); //white background
+    colorRed(); //runs all the different color voids
     colorBlue();
     colorPurple();
     colorYellow();
-    line(200, 0, 200, 400);
+    line(200, 0, 200, 400); //perpendicular lines
     line(0, 200, 400, 200);
 }
 
@@ -22,7 +22,7 @@ void colorRed() {
     if(mouseX <= 200 && mouseY <= 200) {
         fill(255, 0, 0);
         textFont(myFont, 20);
-        text("RED", mouseX, mouseY);
+        text("RED", mouseX, mouseY); //displays red text "red"
     }
 }
 
@@ -30,7 +30,7 @@ void colorBlue() {
     if(mouseX >= 200 && mouseY <= 200) {
         fill(0, 0, 255);
         textFont(myFont, 20);
-        text("BLUE", mouseX, mouseY);
+        text("BLUE", mouseX, mouseY); //displays blue text "blue"
     } 
 }
 
