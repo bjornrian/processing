@@ -1,4 +1,4 @@
-Font myFont; //font class for processing
+PFont myFont; //font class for processing
 
 void setup() {
     size(400, 400); //display size
@@ -10,16 +10,16 @@ void setup() {
 
 void draw() {
     background(255, 255, 255); //white background
+    line(200, 0, 200, 400); //perpendicular lines
+    line(0, 200, 400, 200);
     colorRed(); //runs all the different color voids
     colorBlue();
     colorPurple();
     colorYellow();
-    line(200, 0, 200, 400); //perpendicular lines
-    line(0, 200, 400, 200);
 }
 
 void colorRed() {
-    if(mouseX <= 200 && mouseY <= 200) {
+    if(mouseX <= 200 && mouseY <= 200) { //upper left corner
         fill(255, 0, 0);
         textFont(myFont, 20);
         text("RED", mouseX, mouseY); //displays red text "red"
@@ -27,7 +27,7 @@ void colorRed() {
 }
 
 void colorBlue() {
-    if(mouseX >= 200 && mouseY <= 200) {
+    if(mouseX >= 200 && mouseY <= 200) { //upper right corner
         fill(0, 0, 255);
         textFont(myFont, 20);
         text("BLUE", mouseX, mouseY); //displays blue text "blue"
@@ -35,17 +35,20 @@ void colorBlue() {
 }
 
 void colorPurple() {
-    if(mouseX <= 200 && mouseY >= 200) {
+    if(mouseX <= 200 && mouseY >= 200) { //bottom left corner
         fill(128, 0, 128);
         textFont(myFont, 20);
-        text("PURPLE", mouseX, mouseY);
+        text("PURPLE", mouseX, mouseY); //displays purple text "purple"
     } 
 }
 
 void colorYellow() {
-    if(mouseX >= 200 && mouseY >= 200) {
+    if(mouseX >= 200 && mouseY >= 200) { //bottom right corner
         fill(255, 255, 0);
         textFont(myFont, 20);
-        text("YELLOW", mouseX, mouseY);
-    }
+        text("YELLOW", mouseX, mouseY); //displays yellow text "yellow"
+    } else {
+           fill(255, 255, 0);
+           text("WOW!", 300, 300);
+    } 
 }
