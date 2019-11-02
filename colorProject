@@ -23,7 +23,10 @@ void colorRed() {
         fill(255, 0, 0);
         textFont(myFont, 20);
         text("RED", mouseX, mouseY); //displays red text "red"
-    }
+    }    else if(mouseX == 201 && mouseY == 201) {
+             fill(0);
+             text("GOOD JOB", 100, 100);
+         }
 }
 
 void colorBlue() {
