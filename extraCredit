@@ -1,0 +1,30 @@
+// Exploring CS _ IN CLASS ASSIGNMENT
+// mr_g
+// 10.10.2018
+//Bjorn's Version
+
+// Exercise : Consider a grading system where numbers 
+// are turned into letters. Fill in the blanks in the 
+// following code to complete the boolean expression.
+// If you finish with time remaining in class, add a
+// color change to the printed grade.
+
+// Upload your version of this program for "xtra cred"
+
+float grade = random(0,100);
+    if (grade <= 100 && grade >= 90) {
+        println("Assign letter grade A.");
+        println("Color is green.");
+    }    else if (grade < 90 && grade >= 80) { // In one conditional statement, you can only ever have one if and one else. However, you can have as many else if's as you like!
+        println ("Assign letter grade B.");
+        println("Color is blue.");
+    }    else if (grade < 80 && grade >= 70) {
+        println ("Assign letter grade C.");
+        println("Color is yellow.");
+    }    else if (grade < 70 && grade >= 60) {
+        println ("Assign letter grade D.");
+        println("Color is orange.");
+    }    else {
+        println ("Assign letter grade E.");
+        println("Color is red.");
+    }
