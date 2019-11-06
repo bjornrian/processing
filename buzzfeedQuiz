@@ -1,14 +1,33 @@
-PFont smallFont;
-PFont bigFont;
-
-
+PFont myFont;
 
 void setup() {
-createFont("Arial Rounded Bold.ttf", 52);
-createFont("Arial Rounded Bold.ttf", 32);
-size(4000, 950);
+myFont = createFont("Avenir Next.ttc", 32);
+textFont(myFont);
+size(1000, 950);
 }
 
 void draw() {
-background(0, 0, 0);
+background(255, 255, 255);
+textFont(myFont);
+fill(0);
+text("Buzzfeed Quiz: What is your favorite type of Swallow?", 30, 50);
+  text("What is your name?", width/29.71, height/9.71);
+    fill(0, 0, 255);
+    rect(width/31.37, height/8.38, width/2.91, height/5.00);
+    fill(255, 255, 255);
+    text("Sir Lancelot", width/8.47, height/4.33);
+    fill(0, 0, 255);
+    rect(width/2.53, height/8.38, width/2.91, height/5.00);
+    fill(255, 255, 255);
+    text("Sir Robin", width/2.00, height/4.30);
+    fill(0, 0, 255);
+    rect(width/31.37, height/2.96, width/2.91, height/5.00);
+    fill(255, 255, 255);
+    strokeWeight(5);
+    text("Sir Galahad", width/8.40, height/2.25);
+    fill(0, 0, 255);
+    rect(width/2.53, height/2.96, width/2.91, height/5.00);
+    fill(255, 255, 255);
+    text("Arthur, King", width/2.10, height/2.37);
+    text("of the Britains", width/2.17, height/2.17);
 }
