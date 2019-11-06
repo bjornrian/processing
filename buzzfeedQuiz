@@ -1,0 +1,14 @@
+PFont smallFont;
+PFont bigFont;
+
+
+
+void setup() {
+createFont("Arial Rounded Bold.ttf", 52);
+createFont("Arial Rounded Bold.ttf", 32);
+size(4000, 950);
+}
+
+void draw() {
+background(0, 0, 0);
+}
