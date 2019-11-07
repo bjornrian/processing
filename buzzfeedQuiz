@@ -22,7 +22,104 @@ text("Buzzfeed Quiz: What is your favorite type of Swallow?", 30, 50);
     text("Sir Robin", width/2.00, height/4.30);
     fill(0, 0, 255);
     rect(width/31.37, height/2.96, width/2.91, height/5.00);
+    fill(255, 255, 255);PFont myFont;
+int a = 32;
+int b = 32;
+int c = 32;
+int d = 32;
+
+void setup()
+{
+    myFont = createFont("Avenir Next.ttc", 32);
+    textFont(myFont);
+    size(1000, 950);
+    PFont.list();
+    textAlign(CENTER);
+}
+
+void draw()
+{
+    background(255, 255, 255);
+    textFont(myFont, 32);
+    fill(0);
+    text("Buzzfeed Quiz: What is your favorite type of Swallow?", 397, 50);
+    text("What is your name?", width / 5.82, height / 9.71);
+    fill(0, 0, 255);
+    rect(width / 31.37, height / 8.38, width / 2.91, height / 5.00);
     fill(255, 255, 255);
+    textFont(myFont, a);
+    text("Sir Lancelot", width / 4.93, height / 4.33);
+    fill(0, 0, 255);
+    rect(width / 2.53, height / 8.38, width / 2.91, height / 5.00);
+    fill(255, 255, 255);
+    textFont(myFont, b);
+    text("Sir Robin", width / 1.74, height / 4.30);
+    fill(0, 0, 255);
+    rect(width / 31.37, height / 2.96, width / 2.91, height / 5.00);
+    fill(255, 255, 255);
+    strokeWeight(5);
+    textFont(myFont, c);
+    text("Sir Galahad", width / 4.88, height / 2.25);
+    fill(0, 0, 255);
+    rect(width / 2.53, height / 2.96, width / 2.91, height / 5.00);
+    fill(255, 255, 255);
+    textFont(myFont, d);
+    text("Arthur, King", width / 1.75, height / 2.37);
+    text("of the Britains", width / 1.76, height / 2.17);
+    textEnlarge();
+    collectAnswers();
+}
+
+void textEnlarge()
+{
+    if (topLeft()) {
+        a = a + 2;
+    } else if (a >= 40 && topLeft()) {
+        a = 40;
+    } else {
+        a = 32;
+    }
+    if (topRight()) {
+        b = b + 2;
+    } else if (b >= 40 && topRight()) {
+        b = 40;
+    } else {
+        b = 32;
+    }
+    if (bottomLeft()) {
+        c = c + 2;
+    } else if (c >= 40 && bottomLeft()) {
+        c = 40;
+    } else {
+        c = 32;
+    }
+    if (bottomRight()) {
+        d = d + 2;
+    } else if (d >= 40 && bottomLeft()) {
+        d = 40;
+    } else {
+        d = 32;
+    }
+}
+
+boolean topLeft() {
+    return mouseX >= width / 31.37 && mouseX <= width / 2.67 && mouseY <= height / 3.13 && mouseY >= height / 8.47 && a < 40;
+}
+boolean topRight() {
+    return mouseX >= width / 31.37 && mouseX <= width / 2.67 && mouseY <= height / 3.13 && mouseY >= height / 8.47 && a < 40;
+}
+boolean bottomLeft() {
+    return mouseX >= width / 31.37 && mouseX <= width / 2.67 && mouseY <= height / 3.13 && mouseY >= height / 8.47 && a < 40;
+}
+boolean bottomRight() {
+    return mouseX >= width / 31.37 && mouseX <= width / 2.67 && mouseY <= height / 3.13 && mouseY >= height / 8.47 && a < 40;
+}
+
+void collectAnswers()
+{
+
+
+}
     strokeWeight(5);
     text("Sir Galahad", width/8.40, height/2.25);
     fill(0, 0, 255);
