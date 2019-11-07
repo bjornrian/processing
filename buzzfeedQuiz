@@ -1,28 +1,4 @@
 PFont myFont;
-
-void setup() {
-myFont = createFont("Avenir Next.ttc", 32);
-textFont(myFont);
-size(1000, 950);
-}
-
-void draw() {
-background(255, 255, 255);
-textFont(myFont);
-fill(0);
-text("Buzzfeed Quiz: What is your favorite type of Swallow?", 30, 50);
-  text("What is your name?", width/29.71, height/9.71);
-    fill(0, 0, 255);
-    rect(width/31.37, height/8.38, width/2.91, height/5.00);
-    fill(255, 255, 255);
-    text("Sir Lancelot", width/8.47, height/4.33);
-    fill(0, 0, 255);
-    rect(width/2.53, height/8.38, width/2.91, height/5.00);
-    fill(255, 255, 255);
-    text("Sir Robin", width/2.00, height/4.30);
-    fill(0, 0, 255);
-    rect(width/31.37, height/2.96, width/2.91, height/5.00);
-    fill(255, 255, 255);PFont myFont;
 int a = 32;
 int b = 32;
 int c = 32;
@@ -72,30 +48,30 @@ void draw()
 
 void textEnlarge()
 {
-    if (topLeft()) {
+    if (a < 40 && topLeft()) {
         a = a + 2;
     } else if (a >= 40 && topLeft()) {
         a = 40;
     } else {
         a = 32;
     }
-    if (topRight()) {
+    if (b < 40 && topRight()) {
         b = b + 2;
     } else if (b >= 40 && topRight()) {
         b = 40;
     } else {
         b = 32;
     }
-    if (bottomLeft()) {
+    if (c < 40 && bottomLeft()) {
         c = c + 2;
     } else if (c >= 40 && bottomLeft()) {
         c = 40;
     } else {
         c = 32;
     }
-    if (bottomRight()) {
+    if (d < 40 && bottomRight()) {
         d = d + 2;
-    } else if (d >= 40 && bottomLeft()) {
+    } else if (d >= 40 && bottomRight()) {
         d = 40;
     } else {
         d = 32;
@@ -103,28 +79,19 @@ void textEnlarge()
 }
 
 boolean topLeft() {
-    return mouseX >= width / 31.37 && mouseX <= width / 2.67 && mouseY <= height / 3.13 && mouseY >= height / 8.47 && a < 40;
+    return mouseX >= width / 31.37 && mouseX <= width / 2.67 && mouseY <= height / 3.13 && mouseY >= height / 8.47;
 }
 boolean topRight() {
-    return mouseX >= width / 31.37 && mouseX <= width / 2.67 && mouseY <= height / 3.13 && mouseY >= height / 8.47 && a < 40;
+    return mouseX >= width / 2.54 && mouseX <= width / 1.35 && mouseY <= height / 3.13 && mouseY >= height / 8.47;
 }
 boolean bottomLeft() {
-    return mouseX >= width / 31.37 && mouseX <= width / 2.67 && mouseY <= height / 3.13 && mouseY >= height / 8.47 && a < 40;
+    return mouseX >= width / 31.37 && mouseX <= width / 2.67 && mouseY <= height / 1.86 && mouseY >= height / 2.96;
 }
 boolean bottomRight() {
-    return mouseX >= width / 31.37 && mouseX <= width / 2.67 && mouseY <= height / 3.13 && mouseY >= height / 8.47 && a < 40;
+    return mouseX >= width / 2.54 && mouseX <= width / 1.35 && mouseY <= height / 1.86 && mouseY >= height / 2.96;
 }
 
 void collectAnswers()
 {
-
-
-}
-    strokeWeight(5);
-    text("Sir Galahad", width/8.40, height/2.25);
-    fill(0, 0, 255);
-    rect(width/2.53, height/2.96, width/2.91, height/5.00);
-    fill(255, 255, 255);
-    text("Arthur, King", width/2.10, height/2.37);
-    text("of the Britains", width/2.17, height/2.17);
+//last step
 }
