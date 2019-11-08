@@ -1,8 +1,11 @@
+PImage img1;
+PImage img2;
 PFont myFont;
 int a = 32;
 int b = 32;
 int c = 32;
 int d = 32;
+int e = 0;
 
 void setup()
 {
@@ -11,6 +14,8 @@ void setup()
     size(1000, 950);
     PFont.list();
     textAlign(CENTER);
+    img1 = loadImage("europeanSwallow.jpg");
+    img2 = loadImage("africanSwallow.jpg");
 }
 
 void draw()
@@ -42,6 +47,7 @@ void draw()
     textFont(myFont, d);
     text("Arthur, King", width / 1.75, height / 2.37);
     text("of the Britains", width / 1.76, height / 2.17);
+    textSize(32);
     textEnlarge();
     collectAnswers();
 }
@@ -93,5 +99,26 @@ boolean bottomRight() {
 
 void collectAnswers()
 {
-//last step
+if(topLeft() && mousePressed == true) {
+e = 1;
+}
+if(bottomLeft() && mousePressed == true) {
+e = 1;
+}
+if(topRight() && mousePressed == true) {
+e = 2;
+}
+if(bottomRight() && mousePressed == true) {
+e = 2;
+}
+if(e == 1) {
+image(img1, width/4.96, height/1.35, img1.width/0.75, img1.height/0.84);
+fill(0);
+text("European Swallow!", width/2.68, height/1.37);
+}
+if(e == 2) {
+image(img2, width/4.96, height/1.35, img2.width/0.75, img2.height/0.84);
+fill(0);
+text("African Swallow!", width/2.57, height/1.37);
+}
 }
