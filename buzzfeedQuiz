@@ -5,7 +5,13 @@ int a = 32;
 int b = 32;
 int c = 32;
 int d = 32;
-int e = 0;
+int answer = 0;
+int mouseClicks = 0;
+String question = "What is your name?";
+String answer1 = "Sir Lancelot";
+String answer2 = "Sir Robin";
+String answer3 = "Sir Galahad";
+String answer4 = "King Arthur";
 
 void setup()
 {
@@ -23,33 +29,37 @@ void draw()
     background(255, 255, 255);
     textFont(myFont, 32);
     fill(0);
-    text("Buzzfeed Quiz: What is your favorite type of Swallow?", 397, 50);
-    text("What is your name?", width / 5.82, height / 9.71);
+    text("Buzzfeed Quiz: Find out what your ", 397, 50);
+    text(question, width / 5.82, height / 9.71);
     fill(0, 0, 255);
     rect(width / 31.37, height / 8.38, width / 2.91, height / 5.00);
     fill(255, 255, 255);
     textFont(myFont, a);
-    text("Sir Lancelot", width / 4.93, height / 4.33);
+    text(answer1, width / 4.93, height / 4.33);
     fill(0, 0, 255);
     rect(width / 2.53, height / 8.38, width / 2.91, height / 5.00);
     fill(255, 255, 255);
     textFont(myFont, b);
-    text("Sir Robin", width / 1.74, height / 4.30);
+    text(answer2, width / 1.74, height / 4.30);
     fill(0, 0, 255);
     rect(width / 31.37, height / 2.96, width / 2.91, height / 5.00);
     fill(255, 255, 255);
     strokeWeight(5);
     textFont(myFont, c);
-    text("Sir Galahad", width / 4.88, height / 2.25);
+    text(answer3, width / 4.88, height / 2.25);
     fill(0, 0, 255);
     rect(width / 2.53, height / 2.96, width / 2.91, height / 5.00);
     fill(255, 255, 255);
     textFont(myFont, d);
-    text("Arthur, King", width / 1.75, height / 2.37);
-    text("of the Britains", width / 1.76, height / 2.17);
+    text(answer4, width / 1.74, height / 2.24);
     textSize(32);
     textEnlarge();
+    mouseClicked();
+    stageOne();
+    stageTwo();
+    stageThree();
     collectAnswers();
+    println(mouseClicks);
 }
 
 void textEnlarge()
@@ -99,26 +109,99 @@ boolean bottomRight() {
 
 void collectAnswers()
 {
-if(topLeft() && mousePressed == true) {
-e = 1;
-}
-if(bottomLeft() && mousePressed == true) {
-e = 1;
-}
-if(topRight() && mousePressed == true) {
-e = 2;
-}
-if(bottomRight() && mousePressed == true) {
-e = 2;
-}
-if(e == 1) {
-image(img1, width/4.96, height/1.35, img1.width/0.75, img1.height/0.84);
+if(answer == 3) {
+//image(img1, width/4.96, height/1.35, img1.width/0.75, img1.height/0.84);
 fill(0);
 text("European Swallow!", width/2.68, height/1.37);
 }
-if(e == 2) {
-image(img2, width/4.96, height/1.35, img2.width/0.75, img2.height/0.84);
+if(answer == 1) {
+//image(img2, width/4.96, height/1.35, img2.width/0.75, img2.height/0.84);
 fill(0);
 text("African Swallow!", width/2.57, height/1.37);
+}
+}
+
+void stageOne() {
+if(topLeft() && mousePressed == true && mouseClicks == 0) {
+question = "What is your quest?";
+answer1 = "To arrive in Camelot";
+answer2 = "To seek the whole grail";
+answer3 = "To slay the demon bunny";
+answer4 = "To measure the velocity of an African Swallow";
+answer = answer + 1;
+delay(200);
+} else if(topRight() && mousePressed == true && mouseClicks == 0) {
+question = "What is your quest?";
+answer1 = "To arrive in Camelot";
+answer2 = "To seek the whole grail";
+answer3 = "To slay the demon bunny";
+answer4 = "To measure the velocity of an African Swallow";
+delay(200);
+} else if(bottomLeft() && mousePressed == true && mouseClicks == 0) {
+question = "What is your quest?";
+answer1 = "To arrive in Camelot";
+answer2 = "To seek the whole grail";
+answer3 = "To slay the demon bunny";
+answer4 = "To measure the velocity of an African Swallow";
+delay(200);
+} else if(bottomRight() && mousePressed == true && mouseClicks == 0) {
+question = "What is your quest?";
+answer1 = "To arrive in Camelot";
+answer2 = "To seek the whole grail";
+answer3 = "To slay the demon bunny";
+answer4 = "To measure the velocity of an African Swallow";
+delay(200);
+}
+}
+
+void stageTwo() {
+if(topLeft() && mousePressed == true && mouseClicks == 1) {
+question = "What is your favorite color?";
+answer1 = "Magenta";
+answer2 = "Malachite";
+answer3 = "Feldgrau";
+answer4 = "Blue";
+delay(200);
+} else if(topRight() && mousePressed == true && mouseClicks == 1) {
+question = "What is your favorite color?";
+answer1 = "Magenta";
+answer2 = "Malachite";
+answer3 = "Feldgrau";
+answer4 = "Blue";
+answer = answer + 1;
+delay(200);
+} else if(bottomLeft() && mousePressed == true && mouseClicks == 1) {
+question = "What is your favorite color?";
+answer1 = "Magenta";
+answer2 = "Malachite";
+answer3 = "Feldgrau";
+answer4 = "Blue";
+delay(200);
+} else if(bottomRight() && mousePressed == true && mouseClicks == 1) {
+question = "What is your favorite color?";
+answer1 = "Magenta";
+answer2 = "Malachite";
+answer3 = "Feldgrau";
+answer4 = "Blue";
+delay(200);
+}
+}
+
+void stageThree() {
+if(topLeft() && mousePressed == true && mouseClicks == 2) {
+answer = 1;
+} else if(topRight() && mousePressed == true && mouseClicks == 2) {
+answer = 1;
+} else if(bottomLeft() && mousePressed == true && mouseClicks == 2) {
+answer = 1;
+} else if(bottomRight() && mousePressed == true && mouseClicks == 2) {
+answer = answer + 1;
+}
+}
+
+void mouseClicked() {
+if(mousePressed && mouseX >= width / 31.37 && mouseX <= width / 1.35 && mouseY >= height / 8.47 && mouseY <= height / 1.86) {
+mouseClicks = mouseClicks + 1;
+delay(200);
 }
 }
