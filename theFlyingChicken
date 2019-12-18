@@ -1,0 +1,15 @@
+PImage chicken;
+int imageX = 50;
+void setup() {
+  frameRate(20);
+size(2000, 950);
+chicken = loadImage("chickenTest.jpg");
+imageMode(CENTER);
+}
+
+void draw() {
+background(255);
+image(chicken, imageX, mouseY);
+imageX = imageX + 4;
+
+}
